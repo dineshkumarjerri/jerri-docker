@@ -1,0 +1,48 @@
+docker image commands
+----------------------
+docker images -- to list all images
+docker tag in28min/todo-rest-api-h2:1.0.0.RELEASE  in28min/todo-rest-api-h2:latest -- to add a tag to image
+docker pull mysql -- to pull image from hub repo
+docker search mysql
+docker image history {imageid}
+docker image inspect {imageid}
+docker image remove {imageid}
+
+
+docker container commands
+-------------------------
+docker run -p 5000:5000 -d in28min/todo-rest:1.0.0 RELEASE -- to run the image
+-d -- to run in detached mode
+-p -- to export port to host where container is running
+
+list containers
+----------------
+docker container ls    -- to see list of containers running
+docker container ls -a -- to see list of all containers
+
+
+docker container stop {containerid first 4 digits} -- to stop the container gracefully
+docker container kill {containerid first 4 digits} -- container stopped immediately
+
+docker container pause {first 4 digits of container id} -- to pause container
+docker container unpause {first 4 digits of container id} -- to unpause container
+
+docker logs -f {containerid first 4 digits} -- to tail logs of container
+
+docker container inspect {containerid first 4 digits} -- to inspect
+
+docker container prune -- to remove stopped containers
+
+docker container run -p 8000:5000 -d --restart=always/NO {imagename} -- this will start this container when docker desktop is started
+
+docker events -- to show list of events happening in docker desktop
+docker top {containerid} -- to display processes running in a container
+docker stats -- tod display stats of containers
+
+
+docker container run -p 8000:5000 -d -m 512m --cpu-quota 5000 {imagename} -- to limit memory and cpu(total 100000)
+
+docker system df -- to see docker deamon manged services
+
+
+
