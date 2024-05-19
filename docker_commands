@@ -1,4 +1,6 @@
-docker image commands
+# Docker with Micro Services
+
+## Docker Image Commands
 ----------------------
 docker images -- to list all images
 docker tag in28min/todo-rest-api-h2:1.0.0.RELEASE  in28min/todo-rest-api-h2:latest -- to add a tag to image
@@ -42,7 +44,10 @@ docker stats -- tod display stats of containers
 
 docker container run -p 8000:5000 -d -m 512m --cpu-quota 5000 {imagename} -- to limit memory and cpu(total 100000)
 
-docker system df -- to see docker deamon manged services
+docker system df -- to see docker deamon managed services
+
+go to docker compose.yaml file location then
+docker-compose up
 
 
 
